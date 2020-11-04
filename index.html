@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Mijn website </title>
+<meta charset="utf-8"/>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<header>
+<div class="header1">
+  <h1>Mijn Website</h1>
+  <p> welkom op deze informatica website </p>
+</div>
+</header>
+<header>
+<div class="header">
+<nav>
+<ul>
+<li><a href="index.html">home</a></li>
+<li>
+  <div class="dropdown">
+	<button class="dropbtn">hobby's</button>
+	<div class="dropdown-content">
+	  <a href="hobby1.html">gamen</a>
+	  <a href="hobby2.html">voetbal</a>	
+	</div>
+  </div> 
+</li>
+<li>
+  <div class="dropdown">
+    <button class="dropbtn">havo 4</button>
+    <div class="dropdown-content">
+      <a href="periode1.html">periode 1</a>
+      <a href="periode2.html">periode 2</a>
+      <a href="periode3.html">periode 3</a>
+	  <a href="periode4.html">periode 4</a>
+    </div>
+  </div>
+</li>
+<li><a href="pwrpnt.html">powerpoint</a></li>
+<div id="lol" style="display:none">
+	<li><a href="lol.html">lol</a></li>
+</div>
+</ul>
+</nav>
+</div>
+</header>
+<article>
+<section>
+<h2> Mijn Hobby’s  </h2>
+<button onclick="typebutton()" class="button2" target="_blank"><img src="img/typewriter.png" width=50px ></button>
+
+<p id="hobby"></p>
+
+<script>
+var i = 0;
+var txt = 'Welkom op mijn site. Op deze site kan je lezen over mijn 2 hobby’s voetbal en gamen. Het is erg leuk om op te gaan in het gamen maar het kan ook leuk zijn om af en toe te ontspannen met een voetbaltraining.';
+var speed = 50;
+
+function typebutton() {
+  if (i < txt.length) {
+    document.getElementById("hobby").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typebutton, speed);
+  }
+}
+</script>
+</section>
+<section>
+<h2> Social media </h2>
+<p> Wil je leuke gameplay zien of zelf meedoen doen ga dan naar onze discord pagina en neem contact op. </p>
+<a href="https://discord.gg/BcDZH6m" class="button" target="_blank"><img src="img/discord_logo.jpg" width=100px ></a>
+</section>
+<section>
+<h2> Niewsgierig??? </h2>
+<p> klik op de onderstaande button. </p>
+<button class="button1"onclick='alert("vind de geheime button!!!")'>big button</button>
+</section>
+</article>
+<aside>
+<section>
+<img class=image src="img/over-mij.jpg"onmouseover="this.src='img/over-mij-2.jpg'" onmouseout="this.src='img/over-mij.jpg'" />
+</section>
+<section>
+<h2> over mij </h2>
+<p> Hallo ik ben <strong>tim</strong> en ik heb ADHD. Ik vind het leuk om te bewegen en dingen te doen op de computer. mijn lievelings game is rainbow six siege. </p>
+    <script>
+        function show (elementId) {   
+
+		 document.getElementById("lol").style.display="none";
+		  document.getElementById(elementId).style.display="block";
+		}
+    </script>
+	<button class="hidden "type="button" onclick="show('lol');"></button>
+</section>
+</aside>
+<footer>
+<p> copyright &copy; <script type="text/javascript"> var theDate=new Date(); document.write(theDate.getFullYear()); </script> | mijn website | contact: info@albertsbestratingen.nl</p>
+</footer>
+</body>
+</html>

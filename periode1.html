@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> informatica website </title>
+<meta charset="utf-8"/>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header>
+<h1> informatica website </h1>
+<nav>
+<ul>
+<li><a href="index.html">home</a></li>
+<div class="dropdown">
+  <button class="dropbtn">hobby's</button>
+  <div class="dropdown-content">
+    <a href="hobby1.html">gamen</a>
+    <a href="hobby2.html">voetbal</a>	
+  </div>
+</div> 
+<div class="dropdown">
+  <button class="dropbtn">havo 4</button>
+  <div class="dropdown-content">
+    <a href="periode1.html">periode 1</a>
+    <a href="periode2.html">periode 2</a>
+    <a href="periode3.html">periode 3</a>
+	<a href="periode4.html">periode 4</a>
+  </div>
+</div>
+</ul>
+</nav>
+</header>
+<article>
+<section>
+<h2> periode 1 </h2>
+<p> dit is wat ik gedaan heb in p1 </p>
+</section>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>een lijst met wat ik heb gedaan:</h2>
+
+<button class="accordion">website</button>
+<div class="panel">
+  <p>ik heb deze website gemaakt. dit was het eerste wat we moesten doen.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</article>
+<aside>
+<section>
+<img src="img/over-mij.jpg"onmouseover="this.src='img/over-mij-2.jpg'" onmouseout="this.src='img/over-mij.jpg'"/>
+</section>
+<section>
+<h2> over mij </h2>
+<p> Hallo ik ben <strong>tim</strong> en ik heb ADHD. Ik vind het leuk om te bewegen en dingen te doen op de computer. mijn lievelings game is rainbow six siege.</p>
+</section>
+</aside>
+<footer>
+<p> copyright &copy; <script type="text/javascript"> var theDate=new Date(); document.write(theDate.getFullYear()); </script> | mijn website | contact: info@mijnwebsite.nl</p>
+</footer>
+</body>
+</html>
